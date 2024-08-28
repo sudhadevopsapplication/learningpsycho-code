@@ -1,0 +1,38 @@
+#!/bin/bash
+
+###########################################################
+#Author: sudhapavan
+#date: 28-08-2024
+#
+#version: v1
+#
+#This script will report the aws resource usage
+#
+##################################################################
+#
+#
+#AWS S3
+#AWS EC2
+#AWS IAM ROLE
+#
+#
+#
+
+set -x
+
+echo " s3 bucket list is"
+
+ aws s3 ls
+
+ echo "ec2 instances are"
+
+ aws ec2 describe-instances | jq ' .Reservations[].Instance[].InstanceID'
+
+ echo "lambdas are below"
+
+
+ aws lambda list-function
+
+ echo "iam users are"
+
+ aws iam list-users
