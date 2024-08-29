@@ -1,3 +1,6 @@
+
+
+ok will check merge now
 life is easy when you do hard work
 x=a+b
 
